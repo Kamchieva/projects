@@ -1,18 +1,18 @@
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
-public class Main {
+import java.util.Hashtable;
 
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
     public static void main(String[] args) {
-        Queue<String> queue = new PriorityQueue<>(Collections.reverseOrder());
-        queue.offer("B");
-        queue.offer("C");
-        queue.offer("A");
-        queue.offer("F");
-        queue.offer("D") ;
-        while (!queue.isEmpty()) {
-            System.out.println(queue.poll()) ;
+        Hashtable<String, String> table = new Hashtable<>(21);
+        table.put("100", "Spongebob");
+        table.put("123", "Patrick");
+        table.put("321", "Sandy");
+        table.put("555", "Squidward");
+        table.put("777", "Gary");
+        //table.remove(777) ;
+        for (String key : table.keySet()) {
+            System.out.println(key.hashCode() % 10  +  "\t" +key + "\t" + table.get(key)) ;
 
         }
     }
