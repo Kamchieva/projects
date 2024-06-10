@@ -1,19 +1,19 @@
-import java.util.HashMap;
+import java.util.Hashtable;
 
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        HashMap<String, Integer> empIds = new HashMap<>() ;
-        empIds.put("John", 12345) ;
-        empIds.put("Carl", 54321) ;
-        empIds.put("Jerry", 455664455) ;
+        Hashtable<String, String> table = new Hashtable<>(21);
+        table.put("100", "Spongebob");
+        table.put("123", "Patrick");
+        table.put("321", "Sandy");
+        table.put("555", "Squidward");
+        table.put("777", "Gary");
+        //table.remove(777) ;
+        for (String key : table.keySet()) {
+            System.out.println(key.hashCode() % 10  +  "\t" +key + "\t" + table.get(key)) ;
 
-        System.out.println(empIds) ;
-        System.out.println(empIds.containsValue(12345)) ;
-        empIds.put("John", 3333) ;
-        empIds.replace("Karen", 777) ;
-
-        empIds.putIfAbsent("Steve",222);
-        empIds.remove("Steve");
-        System.out.println(empIds) ;
+        }
     }
 }
