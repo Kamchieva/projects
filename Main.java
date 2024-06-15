@@ -1,19 +1,19 @@
-import java.util.HashMap;
-
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 public class Main {
+
     public static void main(String[] args) {
-        HashMap<String, Integer> empIds = new HashMap<>() ;
-        empIds.put("John", 12345) ;
-        empIds.put("Carl", 54321) ;
-        empIds.put("Jerry", 455664455) ;
+        Queue<String> queue = new PriorityQueue<>(Collections.reverseOrder());
+        queue.offer("B");
+        queue.offer("C");
+        queue.offer("A");
+        queue.offer("F");
+        queue.offer("D") ;
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll()) ;
 
-        System.out.println(empIds) ;
-        System.out.println(empIds.containsValue(12345)) ;
-        empIds.put("John", 3333) ;
-        empIds.replace("Karen", 777) ;
-
-        empIds.putIfAbsent("Steve",222);
-        empIds.remove("Steve");
-        System.out.println(empIds) ;
+        }
     }
 }
