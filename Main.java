@@ -1,19 +1,20 @@
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
-public class Main {
+class Node {
+    int data ;
+    Node next;
 
-    public static void main(String[] args) {
-        Queue<String> queue = new PriorityQueue<>(Collections.reverseOrder());
-        queue.offer("B");
-        queue.offer("C");
-        queue.offer("A");
-        queue.offer("F");
-        queue.offer("D") ;
-        while (!queue.isEmpty()) {
-            System.out.println(queue.poll()) ;
+    Node(int data) {
+        this.data = data ;
+    }
+    public static void main( String[] args) {
+      Node nodeA = new Node(6) ;
+        Node nodeB = new Node(3) ;
+        Node nodeC = new Node(4) ;
+        Node nodeD = new Node(2) ;
+        Node nodeE = new Node(1) ;
 
-        }
+        nodeA.next = nodeB ;
+        nodeB.next = nodeC ;
+        nodeC.next = nodeD ;
+        nodeD.next = nodeE ;
     }
 }
