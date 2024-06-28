@@ -1,17 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
+class Node {
+    int data ;
+    Node next;
 
-        double num1 = - 2.54;
+    Node(int data) {
+        this.data = data ;
+    }
+    public static void main( String[] args) {
+      Node nodeA = new Node(6) ;
+        Node nodeB = new Node(3) ;
+        Node nodeC = new Node(4) ;
+        Node nodeD = new Node(2) ;
+        Node nodeE = new Node(1) ;
 
-        double answer;
-
-        answer = Math.abs(num1);
-
-        System.out.println("The absolute value of " + num1 + " is " + answer) ;
-
-
-
+        nodeA.next = nodeB ;
+        nodeB.next = nodeC ;
+        nodeC.next = nodeD ;
+        nodeD.next = nodeE ;
     }
 }
