@@ -1,20 +1,11 @@
-class Node {
-    int data ;
-    Node next;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = scanner.nextLine();
 
-    Node(int data) {
-        this.data = data ;
-    }
-    public static void main( String[] args) {
-      Node nodeA = new Node(6) ;
-        Node nodeB = new Node(3) ;
-        Node nodeC = new Node(4) ;
-        Node nodeD = new Node(2) ;
-        Node nodeE = new Node(1) ;
+        System.out.println("Hello" + name);
 
-        nodeA.next = nodeB ;
-        nodeB.next = nodeC ;
-        nodeC.next = nodeD ;
-        nodeD.next = nodeE ;
     }
 }
