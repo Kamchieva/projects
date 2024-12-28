@@ -1,23 +1,16 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-class Node {
-    int data ;
-    Node next ;
-    Node(int data)  {
-        this.data = data ;
-    }
-    int countNodes(Node head) {
- int count = 1;
- Node current = head;
+package Random;
 
- while(current.next != null) {
-     current = current . next ;
-     count += 1;
+import java.util.Random;
 
- }
-        return count;
+public class Main {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        //int x = random.nextInt(6) + 1;
+        //double y = random.nextDouble();
+        boolean z = random.nextBoolean();
+
+        System.out.println(z);
     }
 }
-    public static void main(String[] args) {
-
-    }
