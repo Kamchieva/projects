@@ -1,16 +1,11 @@
-package week3;
-
-import java.util.HashMap;
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = scanner.nextLine();
 
-        HashMap<String,Integer> empIds = new HashMap<>();
-        empIds.put("John", 1234);
-        empIds.put("Jerry", 234);
-        empIds.put("Karen", 345);
-
-        System.out.println(empIds);
+        System.out.println("Hello" + name);
 
     }
 }
